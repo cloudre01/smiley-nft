@@ -43,6 +43,7 @@
   "scripts": {
     "chain": "hardhat node --network hardhat",
     "deploy": "hardhat run scripts/deploy.ts",
-    "mint": "hardhat run scripts/mint.ts"
+    "mint": "hardhat run scripts/mint.ts",
+    "verify":"hardhat verify"
   }
 }
