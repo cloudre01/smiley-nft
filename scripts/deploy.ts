@@ -22,7 +22,8 @@ async function main() {
   console.log("Smileys deployed to:", smileys.address);
 
   const result = await smileys.mintItem();
-  await result.wait();
+  const tx = await result.wait();
+  console.log(+tx.events?.[0].args?.[2]);
   const tokenURI = await smileys.tokenURI(1);
   console.log(tokenURI);
 }

@@ -72,22 +72,22 @@ contract Smileys is ERC721Enumerable, Ownable {
                     Base64.encode(
                         bytes(
                             abi.encodePacked(
-                                "{'name':'",
+                                '{"name":"',
                                 name,
-                                "','description':'",
+                                '","description":"',
                                 description,
-                                "', 'external_url':'https://burnyboys.com/token/",
+                                '", "external_url":"https://myportfolio-rho-seven.vercel.app/nft/',
                                 id.toString(),
-                                "', 'attributes': [{'trait_type': 'color1', 'value': '#",
+                                '", "attributes": [{"trait_type": "color1", "value": "#',
                                 color[id].toColor(bytes3(genes[id] >> 3)),
-                                "'},{'trait_type': 'color2', 'value': ",
+                                '"},{"trait_type": "color2", "value": "#',
                                 color[id].toColor(bytes3(genes[id] >> 2)),
-                                "}], 'owner':'",
+                                '"}], "owner":"',
                                 (uint160(ownerOf(id))).toHexString(20),
-                                "', 'image': '",
+                                '", "image": "',
                                 "data:image/svg+xml;base64,",
                                 image,
-                                "'}"
+                                '"}'
                             )
                         )
                     )
